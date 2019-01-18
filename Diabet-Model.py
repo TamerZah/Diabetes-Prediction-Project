@@ -78,6 +78,7 @@ cm = confusion_matrix(y_test, y_pred)
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import cross_val_score
 
+# Evaluating the ANN
 def build_function():
     classifier = Sequential()
     classifier.add(Dense(activation = 'relu', input_dim = 8, units = 4, kernel_initializer = 'uniform'))
@@ -120,7 +121,7 @@ grid_search = grid_search.fit(X_train, y_train)
 best_parameters = grid_search.best_params_
 best_accuracy = grid_search.best_score_
 
-# After tuning
+# After tunning
 def build_function():
     classifier = Sequential()
     classifier.add(Dense(activation = 'relu', input_dim = 8, units = 4, kernel_initializer = 'uniform'))
